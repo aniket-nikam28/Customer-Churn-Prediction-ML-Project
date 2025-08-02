@@ -8,7 +8,7 @@ The project leverages the Telco Customer Churn dataset to analyze customer behav
 Exploratory Data Analysis (EDA): Conducted in notebooks/Churn_EDA_Analysis.ipynb using Pandas, Seaborn, and Matplotlib to uncover patterns (e.g., higher churn rates for month-to-month contracts).
 Data Preprocessing: Transformed categorical variables into one-hot encoded features and binned tenure into six groups (1-12, 13-24, 25-36, 37-48, 49-60, 61-72 months), resulting in 50 features. Preprocessed data saved as data/tel_churn.csv.
 Model Training: Trained a RandomForestClassifier (model.sav) to predict churn, handling imbalanced data with moderate precision (~0.50 for churn class).
-Streamlit Web App: Built in app/churn_prediction_gui.py, featuring:
+Streamlit Web App: Built in Churnapp.py, featuring:
 User-friendly input forms for 15 raw features (e.g., tenure, Contract, MonthlyCharges).
 Input validation to ensure valid ranges.
 Feature importance plot highlighting key predictors (e.g., Contract, tenure).
@@ -17,7 +17,7 @@ Modern UI with teal buttons, off-white backgrounds, and subtle animations.
 
 Deployment: Hosted on Streamlit Community Cloud for public access.
 
-##Dataset
+## Dataset
 The Telco Customer Churn dataset (data/WA_Fn-UseC_-Telco-Customer-Churn.csv) contains 7,043 records and 21 features:
 
 Demographics: gender, SeniorCitizen, Partner, Dependents
@@ -25,7 +25,7 @@ Services: PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBa
 Billing: Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
 Target: Churn (Yes/No)
 
-##Preprocessing:
+## Preprocessing:
 
 One-hot encoded categorical variables (e.g., Contract_Month-to-month, InternetService_Fiber optic).
 Binned tenure into groups for model training.
@@ -34,7 +34,7 @@ Dropped non-predictive customerID.
 
 
 
-##Install Dependencies:
+## Install Dependencies:
 pip install -r requirements.txt
 
 Contents of requirements.txt:
@@ -46,7 +46,7 @@ matplotlib==3.7.2
 seaborn==0.12.2
 
 
-##Ensure Model File:
+# #Ensure Model File:
 
 Place the trained model (model.sav) in the model/ directory.
 
