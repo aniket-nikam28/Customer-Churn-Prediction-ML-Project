@@ -46,7 +46,7 @@ matplotlib==3.7.2
 seaborn==0.12.2
 
 
-# #Ensure Model File:
+## Ensure Model File:
 
 Place the trained model (model.sav) in the model/ directory.
 
